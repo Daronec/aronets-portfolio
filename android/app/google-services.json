@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "126188264955",
+    "firebase_url": "https://aronets-web-default-rtdb.firebaseio.com",
+    "project_id": "aronets-web",
+    "storage_bucket": "aronets-web.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126188264955:android:cfa6400037b9f83c613f5e",
+        "android_client_info": {
+          "package_name": "com.example.aronets_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126188264955-va5tg4t1mkkiniagun9b83kuju5dcuvm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9VUpHB2uklusjW4ouZfc4d6wsio0-Dbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126188264955-va5tg4t1mkkiniagun9b83kuju5dcuvm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
