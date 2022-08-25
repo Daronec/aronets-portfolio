@@ -100,6 +100,48 @@
             </list>
           </value>
         </entry>
+        <entry key="firebase_database">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-9.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_database_platform_interface">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database_platform_interface-0.2.2+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_database_web">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database_web-0.2.1+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_messaging">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-12.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_messaging_platform_interface">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-4.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_messaging_web">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-3.1.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter">
           <value>
             <list>
@@ -125,6 +167,13 @@
           <value>
             <list>
               <option value="C:/src/flutter_windows_3.0.0-stable/flutter/packages/flutter_web_plugins/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
             </list>
           </value>
         </entry>
@@ -250,7 +299,14 @@
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.21.0/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.5.0/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.1/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database-9.1.2/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database_platform_interface-0.2.2+2/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_database_web-0.2.1+4/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-12.0.3/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-4.1.2/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-3.1.2/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11/lib" />

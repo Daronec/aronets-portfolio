@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class Resume {
   final String? name;
   final String? address;
@@ -35,15 +33,12 @@ class Resume {
     this.educationList,
   });
 
-  factory Resume.fromFirestore(
-    DocumentSnapshot<Map<String, dynamic>> snapshot,
-    SnapshotOptions? options,
-  ) {
-    final data = snapshot.data();
+  factory Resume.fromFirestore(Map<String, dynamic>? data) {
     return Resume(
       name: data?['name'],
       address: data?['address'],
-      birthDate: data?['birth_date'],
+      birthDate: data?['birth_date'].toString(),
+      phone: data?['phone'],
       email: data?['email'],
       employment: data?['employment'],
       gender: data?['gender'],
@@ -51,10 +46,22 @@ class Resume {
       schedule: data?['schedule'],
       specialization: data?['specialization'],
       timeBeforeWork: data?['time_before_work'],
-      projectList:
-          data?['projects'] is Iterable ? List.from(data?['projects']) : null,
-      educationList:
-          data?['education'] is Iterable ? List.from(data?['education']) : null,
+      relocation: data?['relocation'],
+      projectList: data?['projects'] is Iterable
+          ? List<Project>.from(
+              data!["projects"].map((x) => Project.fromFirestore(x)),
+            )
+          : null,
+      educationList: data?['educations'] is Iterable
+          ? List<Education>.from(
+              data!["educations"].map((x) => Education.fromFirestore(x)),
+            )
+          : null,
+      workList: data?['works'] is Iterable
+          ? List<Work>.from(
+              data!["works"].map((x) => Work.fromFirestore(x)),
+            )
+          : null,
     );
   }
 
@@ -72,69 +79,78 @@ class Resume {
       if (timeBeforeWork != null) "time_before_work": timeBeforeWork,
       if (projectList != null) "projects": projectList,
       if (workList != null) "works": workList,
-      if (educationList != null) "works": educationList,
+      if (educationList != null) "educations": educationList,
     };
   }
 }
 
 class Project {
+  final int? id;
   final String? description;
   final String? position;
   final String? stack;
   final String? tasks;
+  final int? year;
 
   Project({
+    this.id,
     this.description,
     this.position,
     this.stack,
     this.tasks,
+    this.year,
   });
 
-  factory Project.fromFirestore(
-    DocumentSnapshot<Map<String, dynamic>> snapshot,
-    SnapshotOptions? options,
-  ) {
-    final data = snapshot.data();
+  factory Project.fromFirestore(Map<String, dynamic>? data) {
     return Project(
+      id: data?['id'],
       description: data?['description'],
       position: data?['position'],
       stack: data?['stack'],
       tasks: data?['tasks'],
+      year: data?['year'],
     );
   }
 
   Map<String, dynamic> toFirestore() {
     return {
+      if (id != null) "id": id,
       if (description != null) "description": description,
       if (position != null) "position": position,
       if (stack != null) "stack": stack,
       if (tasks != null) "tasks": tasks,
+      if (year != null) "year": year,
     };
   }
 }
 
 class Work {
-  final String? period;
+  final int? id;
+  final DateTime? startDate;
+  final DateTime? endDate;
   final String? company;
   final String? city;
   final String? position;
   final String? tasks;
 
   Work({
-    this.period,
+    this.id,
+    this.startDate,
+    this.endDate,
     this.company,
     this.city,
     this.position,
     this.tasks,
   });
 
-  factory Work.fromFirestore(
-    DocumentSnapshot<Map<String, dynamic>> snapshot,
-    SnapshotOptions? options,
-  ) {
-    final data = snapshot.data();
+  factory Work.fromFirestore(Map<String, dynamic>? data) {
     return Work(
-      period: data?['period'],
+      startDate: data?['start_date'] != null
+          ? DateTime.fromMillisecondsSinceEpoch(data!['start_date'] as int)
+          : null,
+      endDate: data?['end_date'] != null
+          ? DateTime.fromMillisecondsSinceEpoch(data!['end_date'] as int)
+          : null,
       company: data?['company'],
       city: data?['city'],
       position: data?['position'],
@@ -144,7 +160,8 @@ class Work {
 
   Map<String, dynamic> toFirestore() {
     return {
-      if (period != null) "period": period,
+      if (startDate != null) "start_date": startDate,
+      if (endDate != null) "end_date": endDate,
       if (company != null) "company": company,
       if (city != null) "city": city,
       if (position != null) "position": position,
@@ -154,13 +171,15 @@ class Work {
 }
 
 class Education {
+  final int? id;
   final String? city;
   final String? specialization;
   final String? institution;
-  final String? year;
+  final int? year;
   final String? degree;
 
   Education({
+    this.id,
     this.city,
     this.specialization,
     this.institution,
@@ -168,12 +187,9 @@ class Education {
     this.degree,
   });
 
-  factory Education.fromFirestore(
-    DocumentSnapshot<Map<String, dynamic>> snapshot,
-    SnapshotOptions? options,
-  ) {
-    final data = snapshot.data();
+  factory Education.fromFirestore(Map<String, dynamic>? data) {
     return Education(
+      id: data?['id'],
       city: data?['city'],
       specialization: data?['specialization'],
       institution: data?['institution'],
@@ -184,6 +200,7 @@ class Education {
 
   Map<String, dynamic> toFirestore() {
     return {
+      if (id != null) "id": id,
       if (city != null) "city": city,
       if (institution != null) "institution": institution,
       if (year != null) "year": year,

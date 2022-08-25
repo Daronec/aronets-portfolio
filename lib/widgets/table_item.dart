@@ -1,4 +1,4 @@
-import 'package:aronets_portfolio/stles/text_styles.dart';
+import 'package:aronets_portfolio/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class TableItem extends StatelessWidget {
@@ -14,6 +14,7 @@ class TableItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
           flex: 1,

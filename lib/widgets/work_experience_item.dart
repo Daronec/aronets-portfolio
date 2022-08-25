@@ -1,4 +1,4 @@
-import 'package:aronets_portfolio/stles/text_styles.dart';
+import 'package:aronets_portfolio/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class WorkExperienceItem extends StatelessWidget {
