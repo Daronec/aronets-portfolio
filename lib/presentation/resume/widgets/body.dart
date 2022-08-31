@@ -75,6 +75,9 @@ class _BodyState extends State<Body> {
                           child: Text(
                             menuList[index],
                             style: AppTextStyles.textStyle16w500.copyWith(
+                              decoration: index == indexStack
+                                  ? TextDecoration.underline
+                                  : TextDecoration.none,
                               color: index == indexStack
                                   ? AppColors.primary
                                   : Colors.black,

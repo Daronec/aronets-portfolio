@@ -17,6 +17,7 @@ class _ResumeScreenState extends State<ResumeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: FutureBuilder<Resume?>(
           future: Services.getResume(),
           builder: (context, snapshot) {

@@ -14,6 +14,7 @@ class Resume {
   final List<Project>? projectList;
   final List<Work>? workList;
   final List<Education>? educationList;
+  final int? salary;
 
   Resume({
     this.name,
@@ -31,6 +32,7 @@ class Resume {
     this.projectList,
     this.workList,
     this.educationList,
+    this.salary,
   });
 
   factory Resume.fromFirestore(Map<String, dynamic>? data) {
@@ -47,6 +49,7 @@ class Resume {
       specialization: data?['specialization'],
       timeBeforeWork: data?['time_before_work'],
       relocation: data?['relocation'],
+      salary: data?['salary'],
       projectList: data?['projects'] is Iterable
           ? List<Project>.from(
               data!["projects"].map((x) => Project.fromFirestore(x)),
@@ -80,6 +83,7 @@ class Resume {
       if (projectList != null) "projects": projectList,
       if (workList != null) "works": workList,
       if (educationList != null) "educations": educationList,
+      if (salary != null) "salary": salary,
     };
   }
 }

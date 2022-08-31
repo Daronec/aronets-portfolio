@@ -1,6 +1,7 @@
 import 'package:aronets_portfolio/data/models/resume_model.dart';
 import 'package:aronets_portfolio/source/app_images.dart';
 import 'package:aronets_portfolio/source/functions.dart';
+import 'package:aronets_portfolio/styles/app_colors.dart';
 import 'package:aronets_portfolio/styles/text_styles.dart';
 import 'package:aronets_portfolio/widgets/table_item.dart';
 import 'package:flutter/material.dart';
@@ -55,16 +56,46 @@ class Info extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      resume.phone!,
-                      style: AppTextStyles.textStyle16w500,
+                    GestureDetector(
+                      onTap: () => phoneCall(resume.phone!),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.phone,
+                            size: 18,
+                            color: AppColors.primary,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            resume.phone!,
+                            style: AppTextStyles.textStyle16w500,
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      resume.email!,
-                      style: AppTextStyles.textStyle16w500,
+                    GestureDetector(
+                      onTap: () => sendEmail(resume.email!),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.mail_outline,
+                            size: 18,
+                            color: AppColors.primary,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            resume.email!,
+                            style: AppTextStyles.textStyle16w500,
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 30,
@@ -107,16 +138,16 @@ class Info extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            'Flutter разработчик',
-            style: AppTextStyles.textStyle21bold,
+          TableItem(
+            title: 'Должность',
+            value: resume.specialization!,
           ),
           const SizedBox(
             height: 20,
           ),
           TableItem(
-            title: resume.specialization!,
-            value: 'Программист, разработчик',
+            title: 'Желаемый доход',
+            value: resume.salary.toString(),
           ),
           const SizedBox(
             height: 20,

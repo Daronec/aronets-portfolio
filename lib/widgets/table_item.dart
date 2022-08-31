@@ -27,7 +27,9 @@ class TableItem extends StatelessWidget {
           flex: 2,
           child: Text(
             value,
-            style: AppTextStyles.textStyle16w500,
+            style: AppTextStyles.textStyle16w500.copyWith(
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
       ],
