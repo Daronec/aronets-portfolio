@@ -1,3 +1,4 @@
+import 'package:aronets_portfolio/firebase_options.dart';
 import 'package:aronets_portfolio/presentation/resume/screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -12,13 +13,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      appId: '1:126188264955:web:e54088828e34fd91613f5e',
-      apiKey: 'AIzaSyDjjecyLji25--bSAFVkWeiCq02oWsVPQM',
-      projectId: 'aronets-web',
-      databaseURL: 'https://aronets-web-default-rtdb.firebaseio.com/',
-      messagingSenderId: '126188264955',
-    ),
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
   runApp(const App());
@@ -31,6 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aronets Resume',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
