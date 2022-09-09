@@ -5,6 +5,7 @@ import 'package:aronets_portfolio/styles/app_colors.dart';
 import 'package:aronets_portfolio/styles/text_styles.dart';
 import 'package:aronets_portfolio/widgets/table_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class Info extends StatelessWidget {
   const Info({
@@ -34,7 +35,18 @@ class Info extends StatelessWidget {
                     fit: BoxFit.fitHeight,
                   ),
                 ),
-              ),
+              )
+                  .animate(onPlay: (controller) => controller.repeat())
+                  .shimmer(
+                    duration: 3000.ms,
+                    color: AppColors.primary.withOpacity(0.2),
+                  )
+                  .animate() // this wraps the previous Animate in another Animate
+                  .fadeIn(
+                    duration: 1200.ms,
+                    curve: Curves.easeOutQuad,
+                  )
+                  .slide(),
               const SizedBox(
                 width: 40,
               ),
@@ -64,7 +76,21 @@ class Info extends StatelessWidget {
                             Icons.phone,
                             size: 18,
                             color: AppColors.primary,
-                          ),
+                          )
+                              .animate(
+                                  onPlay: (controller) => controller.repeat())
+                              .rotate(
+                                delay: const Duration(milliseconds: 3000),
+                                duration: const Duration(milliseconds: 700),
+                                curve: Curves.fastOutSlowIn,
+                              )
+                              .scale(
+                                delay: const Duration(milliseconds: 3000),
+                                duration: const Duration(milliseconds: 700),
+                                curve: Curves.easeInBack,
+                                begin: 1,
+                                end: 1.2,
+                              ),
                           const SizedBox(
                             width: 10,
                           ),
@@ -147,7 +173,7 @@ class Info extends StatelessWidget {
           ),
           TableItem(
             title: 'Желаемый доход',
-            value: resume.salary.toString(),
+            value: '${getFormatterNumber(resume.salary.toString())} ₽',
           ),
           const SizedBox(
             height: 20,

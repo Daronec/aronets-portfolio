@@ -177,6 +177,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_animate">
+          <value>
+            <list>
+              <option value="C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_animate-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_lints">
           <value>
             <list>
@@ -456,6 +463,7 @@
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-12.0.3/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_platform_interface-4.1.3/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging_web-3.1.3/lib" />
+      <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_animate-1.0.0/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_native_splash-2.2.8/lib" />
       <root url="file://C:/src/flutter_windows_3.0.0-stable/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.0/lib" />

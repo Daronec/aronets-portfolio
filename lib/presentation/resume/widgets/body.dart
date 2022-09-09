@@ -8,6 +8,9 @@ import 'package:aronets_portfolio/source/constants.dart';
 import 'package:aronets_portfolio/styles/app_colors.dart';
 import 'package:aronets_portfolio/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/animate.dart';
+import 'package:flutter_animate/effects/effects.dart';
+import 'package:flutter_animate/num_duration_extensions.dart';
 
 class Body extends StatefulWidget {
   const Body({
@@ -48,7 +51,10 @@ class _BodyState extends State<Body> {
                       image: AssetImage(AppImages.header),
                     ),
                   ),
-                ),
+                ).animate().fadeIn(
+                      duration: 5000.ms,
+                      curve: Curves.easeOutQuad,
+                    ),
               ],
             ),
           ),
