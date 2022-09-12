@@ -21,5 +21,6 @@ Future<void> main() async {
     "f75ebd0f-50d8-4125-9595-0579d840a911",
     logs: true,
   ));
+  AppMetrica.reportEvent('Open app');
   runApp(const App());
 }
